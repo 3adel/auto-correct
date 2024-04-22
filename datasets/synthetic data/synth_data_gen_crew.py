@@ -1,5 +1,5 @@
 import os
-
+import ollama
 from groq import Groq
 
 client = Groq(
@@ -7,7 +7,7 @@ client = Groq(
 )
 
 
-def show_common_typos(word):
+def show_common_typos_groq(word):
     chat_completion = client.chat.completions.create(
         messages=[
             {
@@ -20,14 +20,30 @@ def show_common_typos(word):
 
     return chat_completion
 
-#print(chat_completion.choices[0].message.content)
+
+
+def show_common_typos_ollama(word):
+    response = ollama.chat(model='llama3:8b', messages=[
+        {
+    'role': 'user',
+    "content": f"List the top 10 common typos or spelling mistakes of the word {word}. Don't o\
+... utput anything else other than the comma separated list of common typos. Don't provide any other context. Don't include the input word in the list. Don't include synynoms of the input words as misspelled words. Don't output any notes or remarks",
+    },])
+
+    return response
+
+
 
 file_path = "/Users/adel/adel/dev/playground/training data/auto-correct/sample.txt"
 lines_count = 0
 with open(file_path, "r") as file:
     for line in file:
         lines_count += 1
-        print(lines_count,line.strip(),": ",show_common_typos(line.strip()).choices[0].message.content)
+        #groq response
+        #print(lines_count,line.strip(),": ",show_common_typos_groq(line.strip()).choices[0].message.content)
+
+        #ollama response
+        print(lines_count,line.strip(),": ",show_common_typos_ollama(line.strip())['message']['content'])
 
 
 #Prompt
