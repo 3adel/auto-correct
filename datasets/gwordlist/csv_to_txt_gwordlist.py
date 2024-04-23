@@ -2,7 +2,7 @@ import csv
 
 # Replace 'yourfile.csv' with the path to your CSV file
 csv_file_path = '/Users/adel/adel/dev/training_data/auto-correct/gwords/raw/raw_frequency-alpha-alldicts.csv'
-text_file_path = '/Users/adel/adel/dev/training_data/auto-correct/gwords/raw/raw_words.csv'
+text_file_path = '/Users/adel/adel/dev/training_data/auto-correct/gwords/raw/raw_words.txt'
 
 # Open the CSV file
 with open(csv_file_path, newline='') as csvfile:

@@ -43,7 +43,7 @@ def save_typos_to_jsonl(source_file_path, output_file_path):
                 break
 
 # Define file paths
-source_file_path = "/Users/adel/adel/dev/training_data/auto-correct/100k_wikidictionary_most_used_english_words/cleaned/clean_wiki-100k.txt"
+source_file_path = "/Users/adel/adel/dev/training_data/auto-correct/gwords/raw/"
 output_file_path = "/Users/adel/adel/dev/training_data/auto-correct/100k_wikidictionary_most_used_english_words/cleaned/clean_wiki-100k.jsonl"
 
 # Call the function to process and save typos
