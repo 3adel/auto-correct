@@ -1,8 +1,10 @@
+#Source file to convert: https://github.com/hackerb9/gwordlist/blob/master/frequency-alpha-alldicts.txt 
+
 import csv
 
 # Open the input file and the output CSV file
-input_file_path = '/Users/adel/adel/dev/training_data/auto-correct/gwords/raw_frequency-alpha-alldicts.txt'
-output_file_path = '/Users/adel/adel/dev/training_data/auto-correct/gwords/raw_frequency-alpha-alldicts.csv'
+input_file_path = '/Users/adel/adel/dev/training_data/auto-correct/gwords/raw/raw_frequency-alpha-alldicts.txt'
+output_file_path = '/Users/adel/adel/dev/training_data/auto-correct/gwords/raw/raw_frequency-alpha-alldicts.csv'
 
 with open(input_file_path, 'r') as infile, open(output_file_path, 'w', newline='') as outfile:
     # Create a CSV writer object
@@ -16,6 +18,8 @@ with open(input_file_path, 'r') as infile, open(output_file_path, 'w', newline='
         # Skip lines that start with '#' (like comments or headers in your file)
         if line.startswith('#'):
             continue
+
+        print(line)
         
         # Split the line into parts based on whitespace
         parts = line.split()
