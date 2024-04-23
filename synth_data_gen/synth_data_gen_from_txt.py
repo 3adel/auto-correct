@@ -39,7 +39,7 @@ def save_typos_to_jsonl(source_file_path, output_file_path):
 
             # Decide how many words to process
             words_count += 1
-            if words_count == 10:
+            if words_count == 1000:
                 break
 
 # Define file paths
