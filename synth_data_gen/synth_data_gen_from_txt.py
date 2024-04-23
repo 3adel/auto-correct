@@ -1,49 +1,50 @@
-import os
+import json
 import ollama
-from groq import Groq
-
-# client = Groq(
-#     api_key=os.environ.get("GROQ_API_KEY"),
-# )
-
-
-# def show_common_typos_groq(word):
-#     chat_completion = client.chat.completions.create(
-#         messages=[
-#             {
-#             "role": "user",
-#             "content": f"You're an expert on the English language and also an expert on the spelling mistkes english speakers make when they use a keyboard to type words. List the top five common spelling mistakes of the word {word}. Output only a comma separated list of the common spelling mistakes with the first one being the most common. Don't provide any other context. Don't include the given correct input word in the list. Don't include synynoms of the input words as misspelled words. Don't output any notes or remarks. The output list should contain non-words only",}
-#         ],
-#         model="llama3-8b-8192",
-#     )
-
-#     return chat_completion
-
-
 
 def show_common_typos_ollama(word):
+    # Call to the Ollama API using the llama3 model
     response = ollama.chat(model='llama3', messages=[
         {
-    'role': 'user',
-    "content": f"List the top 10 common non-word spelling errors for the word '{word}'. These errors should be typos that do not form real English words and should be more than 1 characters long. Provide a comma-separated list of these errors only. Ensure the list does not include '{word}', synonyms of '{word}', or any additional text or explanation.",
-    },])
-
+            'role': 'user',
+            "content": f"List the top 10 common non-word spelling errors for the word '{word}'. These errors should be typos that do not form real English words and should be more than 1 characters long. Provide a comma-separated list of these errors only. Ensure the list does never include '{word}', synonyms of '{word}'. Ensure that the answer never include any additinal text."
+        },
+    ])
     return response
 
+def save_typos_to_jsonl(source_file_path, output_file_path):
+    # Open the source file and output file
+    with open(source_file_path, "r") as file, open(output_file_path, "w") as outfile:
 
+        words_count = 0
 
+        # Iterate over each line in the source file
+        for line in file:
+            word = line.strip()
+            
+
+            # Get the response from Ollama
+            typo_response = show_common_typos_ollama(word)
+            
+
+            # Assuming the typo_response returns JSON with a specific structure. Adjust according to actual API response.
+            typos_list = typo_response['message']['content']
+            print(words_count,word,"->",typos_list)
+
+            # Create a JSON object for each line and write to the output file
+            json_line = json.dumps({
+                "word": word,
+                "typos": typos_list
+            })
+            outfile.write(json_line + "\n")  # Write the JSON line followed by a newline character
+
+            # Decide how many words to process
+            words_count += 1
+            if words_count == 10:
+                break
+
+# Define file paths
 source_file_path = "/Users/adel/adel/dev/training_data/auto-correct/100k_wikidictionary_most_used_english_words/cleaned/clean_wiki-100k.txt"
-lines_count = 0
-with open(source_file_path, "r") as file:
-    for line in file:
-        lines_count += 1
-        #groq response
-        # print(lines_count,line.strip(),": ",show_common_typos_groq(line.strip()).choices[0].message.content)
+output_file_path = "/Users/adel/adel/dev/training_data/auto-correct/100k_wikidictionary_most_used_english_words/cleaned/clean_wiki-100k.jsonl"
 
-        #ollama response
-        print(lines_count,line.strip(),": ",show_common_typos_ollama(line.strip())['message']['content'])
-
-
-#Prompt
-
-
+# Call the function to process and save typos
+save_typos_to_jsonl(source_file_path, output_file_path)
