@@ -32,19 +32,19 @@ def save_typos_to_jsonl(source_file_path, output_file_path):
 
             # Create a JSON object for each line and write to the output file
             json_line = json.dumps({
-                "word": word,
-                "typos": typos_list
+                "correct_word": word,
+                "misspellings": typos_list
             })
             outfile.write(json_line + "\n")  # Write the JSON line followed by a newline character
 
             # Decide how many words to process
             words_count += 1
-            if words_count == 1000:
+            if words_count == 100:
                 break
 
 # Define file paths
-source_file_path = "/Users/adel/adel/dev/training_data/auto-correct/gwords/raw/"
-output_file_path = "/Users/adel/adel/dev/training_data/auto-correct/100k_wikidictionary_most_used_english_words/cleaned/clean_wiki-100k.jsonl"
+source_file_path = "/Users/adel/adel/dev/training_data/auto-correct/gwords/raw/raw_words.txt"
+output_file_path = "/Users/adel/adel/dev/training_data/auto-correct/gwords/jsonified/frequency-alpha-alldicts.jsonl"
 
 # Call the function to process and save typos
 save_typos_to_jsonl(source_file_path, output_file_path)
