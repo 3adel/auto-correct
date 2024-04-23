@@ -6,7 +6,7 @@ def show_common_typos_ollama(word):
     response = ollama.chat(model='llama3', messages=[
         {
             'role': 'user',
-            "content": f"List the top 10 common non-word spelling errors for the word '{word}'. These errors should be typos that do not form real English words and should be more than 1 characters long. Provide a comma-separated list of these errors only. Ensure the list does never include '{word}', synonyms of '{word}'. Ensure that the answer never include any additinal text."
+            "content": f"List only five common non-word spelling errors for the word '{word}'. These errors should be common typos that an English native speaker would make regularly. The errrors shoulo not form real English words. The typos should be more than 1 characters long each. Only provide a comma-separated list of these errors. Ensure the list does never include the word '{word}' or synonyms of the word '{word}'. Ensure that the answer never include any additinal text. The list of errors should be ranked from most common to the least commmon"
         },
     ])
     return response
@@ -39,7 +39,7 @@ def save_typos_to_jsonl(source_file_path, output_file_path):
 
             # Decide how many words to process
             words_count += 1
-            if words_count == 100:
+            if words_count == 10000:
                 break
 
 # Define file paths
