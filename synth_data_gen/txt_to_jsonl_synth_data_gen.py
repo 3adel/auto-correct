@@ -27,7 +27,7 @@ def save_typos_to_jsonl(source_file_path, output_file_path):
             
 
             # Assuming the typo_response returns JSON with a specific structure. Adjust according to actual API response.
-            typos_list = typo_response['response']
+            typos_list = typo_response['response'].split(", ")
             print(words_count,word,"->",typos_list)
 
             # Create a JSON object for each line and write to the output file
@@ -39,7 +39,7 @@ def save_typos_to_jsonl(source_file_path, output_file_path):
 
             # Decide how many words to process
             words_count += 1
-            if words_count == 999:
+            if words_count == 10:
                 break
 
 # Define file paths
