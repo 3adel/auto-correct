@@ -11,7 +11,7 @@ def show_common_typos_ollama(word):
         })
     return response
 
-def save_typos_to_jsonl(source_file_path, output_file_path):
+def save_typos_to_jsonl(source_file_path, output_file_path, number_of_words):
     # Open the source file and output file
     with open(source_file_path, "r") as file, open(output_file_path, "w") as outfile:
 
@@ -20,12 +20,9 @@ def save_typos_to_jsonl(source_file_path, output_file_path):
         # Iterate over each line in the source file
         for line in file:
             word = line.strip()
-            
-
             # Get the response from Ollama
             typo_response = show_common_typos_ollama(word)
             
-
             # Assuming the typo_response returns JSON with a specific structure. Adjust according to actual API response.
             typos_list = typo_response['response'].split(", ")
             print(words_count,word,"->",typos_list)
@@ -39,12 +36,14 @@ def save_typos_to_jsonl(source_file_path, output_file_path):
 
             # Decide how many words to process
             words_count += 1
-            if words_count == 10:
+            if words_count == number_of_words + 1:
                 break
 
 # Define file paths
 source_file_path = "/Users/adel/adel/dev/training_data/auto-correct/gwords/raw/raw_words.txt"
-output_file_path = "/Users/adel/adel/dev/training_data/auto-correct/gwords/jsonified/frequency-alpha-alldicts.jsonl"
+output_file_path_1000_words = "/Users/adel/adel/dev/training_data/auto-correct/gwords/jsonified/frequency-alpha-alldicts_1000_words.jsonl"
+output_file_path_10000_words = "/Users/adel/adel/dev/training_data/auto-correct/gwords/jsonified/frequency-alpha-alldicts_10000_words.jsonl"
 
 # Call the function to process and save typos
-save_typos_to_jsonl(source_file_path, output_file_path)
+save_typos_to_jsonl(source_file_path, output_file_path_1000_words,1000)
+save_typos_to_jsonl(source_file_path, output_file_path_10000_words,10000)
