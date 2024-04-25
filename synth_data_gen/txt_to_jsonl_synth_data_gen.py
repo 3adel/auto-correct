@@ -24,7 +24,7 @@ def save_typos_to_jsonl(source_file_path, output_file_path, number_of_words):
             typo_response = show_common_typos_ollama(word)
             
             # Assuming the typo_response returns JSON with a specific structure. Adjust according to actual API response.
-            typos_list = typo_response['response'].split(", ")
+            typos_list = typo_response['response'].split(",")
             print(words_count,word,"->",typos_list)
 
             # Create a JSON object for each line and write to the output file
@@ -36,14 +36,20 @@ def save_typos_to_jsonl(source_file_path, output_file_path, number_of_words):
 
             # Decide how many words to process
             words_count += 1
-            if words_count == number_of_words + 1:
+            if words_count == number_of_words:
                 break
 
 # Define file paths
 source_file_path = "/Users/adel/adel/dev/training_data/auto-correct/gwords/raw/raw_words.txt"
+output_file_path_10_words = "/Users/adel/adel/dev/training_data/auto-correct/gwords/jsonified/frequency-alpha-alldicts_10_words.jsonl"
+output_file_path_100_words = "/Users/adel/adel/dev/training_data/auto-correct/gwords/jsonified/frequency-alpha-alldicts_100_words.jsonl"
 output_file_path_1000_words = "/Users/adel/adel/dev/training_data/auto-correct/gwords/jsonified/frequency-alpha-alldicts_1000_words.jsonl"
+output_file_path_2000_words = "/Users/adel/adel/dev/training_data/auto-correct/gwords/jsonified/frequency-alpha-alldicts_2000_words.jsonl"
 output_file_path_10000_words = "/Users/adel/adel/dev/training_data/auto-correct/gwords/jsonified/frequency-alpha-alldicts_10000_words.jsonl"
 
 # Call the function to process and save typos
+# save_typos_to_jsonl(source_file_path, output_file_path_10_words,10)
+# save_typos_to_jsonl(source_file_path, output_file_path_100_words,100)
 save_typos_to_jsonl(source_file_path, output_file_path_1000_words,1000)
-save_typos_to_jsonl(source_file_path, output_file_path_10000_words,10000)
+#save_typos_to_jsonl(source_file_path, output_file_path_2000_words,2000)
+# save_typos_to_jsonl(source_file_path, output_file_path_10000_words,10000)

@@ -2,8 +2,8 @@ import json
 import csv
 
 # Specify the path to the JSONL file and the output CSV file
-input_file_path = '/Users/adel/adel/dev/training_data/auto-correct/gwords/jsonified/frequency-alpha-alldicts.jsonl'
-output_csv_path = '/Users/adel/adel/dev/training_data/auto-correct/gwords/jsonified/999-clean-frequency-alpha-alldicts.csv'
+input_file_path = '/Users/adel/adel/dev/training_data/auto-correct/gwords/jsonified/frequency-alpha-alldicts_1000_words.jsonl'
+output_csv_path = '/Users/adel/adel/dev/training_data/auto-correct/gwords/jsonified/frequency-alpha-alldicts_1000`_words.csv'
 
 # Open the JSONL file and the CSV file
 with open(input_file_path, 'r') as jsonl_file, open(output_csv_path, 'w', newline='') as csv_file:
