@@ -1,0 +1,285 @@
+2024-05-03 09:54:29 - Execution starts
+2024-05-03 09:54:46 - # rows in training data = 41232
+2024-05-03 09:54:46 - ############ Random seen data to be validated by the model later.
+2024-05-03 09:54:46 - Seen data: [(' moviing', 'moving'), (' intol', 'into'), (' arrnaged', 'arranged'), (' shiot', 'shot'), (' zerro', 'zero'), (' resirved', 'reserved'), (' braik', 'break'), (' technicall', 'technical'), (' Louius', 'Louis'), (' wilingg', 'willing'), (' welflare', 'welfare'), (' Wared', 'Ward'), (' unlese', 'unless'), (' serded', 'served'), (' Univrsitiy', 'University'), (' casst', 'cast'), (' vistit', 'visit'), (' tilol', 'till'), ('teahc', 'teach'), (' ctity', 'city'), (' Loosa', 'Los'), (' completiion', 'completion'), ('turin', 'turn'), (' twolive', 'twelve'), (' sevni', 'seven'), (' prared', 'prepared'), (' wht', 'what'), (' millyenn', 'million'), (' escpe', 'escape'), (' gaourd', 'guard'), (' plasyes', 'plays'), (' sugjest', 'suggest'), (' Wasihngton', 'Washington'), (' siurley', 'surely'), (' globil', 'global'), (' Sisr', 'Sir'), (' choues', 'choose'), (' Halls', 'Hall'), (' flill', 'fill'), (' Legeslation', 'legislation'), (' Bulltin', 'Bulletin'), ('higheay', 'highway'), (' sofware', 'software'), ('budgett', 'budget'), (' exsist', 'exist'), (' kwno', 'know'), (' rknk', 'rank'), (' defnese', 'defense'), (' eyght', 'eight'), (' troips', 'troops'), (' exses', 'ex'), (' sente', 'cent'), (' significntly', 'significantly'), (' jugde', 'judge'), (' proceedin', 'proceeding'), (' mastir', 'master'), (' ensyure', 'ensure'), (' blcack', 'black'), (' bonde', 'bond'), (' offecial', 'official'), (' sput', 'spot'), (' adverstising', 'advertising'), (' untix', 'unto'), (' narowlw', 'narrow'), (' telpehone', 'telephone'), (' fallng', 'falling'), (' therowf', 'thereof'), (' lonly', 'only'), (' professoin', 'profession'), (' rodeos', 'roads'), ('babbay', 'baby'), (' fortie', 'forty'), (' breyht', 'breath'), (' oght', 'ought'), (' comone', 'common'), (' takong', 'taking'), (' faliire', 'failure'), (' probabitly', 'probability'), (' extnsition', 'extension'), (' matirix', 'matrix'), (' invold', 'involved'), (' kyll', 'kill'), (' arrveid', 'arrived'), (' wamr', 'warm'), (' Parits', 'Paris'), ('deat', 'death'), (' roil', 'role'), (' exspod', 'exposed'), (' feif', 'fee'), ('sidse', 'sides'), (' botte', 'boat'), (' womean', 'woman'), (' cesas', 'case'), (' Davsi', 'Davis'), (' outstandng', 'outstanding'), (' bala', 'ball'), (' formerliy', 'formerly'), (' repreznting', 'representing'), (' recird', 'record'), (' housheld', 'household')]
+2024-05-03 09:54:46 - ############ Unseen data to be validated by the model later.
+2024-05-03 09:54:46 - Number of rows in unseen validation data = 100
+2024-05-03 09:54:46 - Unawwn validation data: [('Appel', 'Apple'), ('Booke', 'Book'), ('Kare', 'Car'), ('Dög', 'Dog'), ('Hoise', 'House'), ('Trei', 'Tree'), ('Freind', 'Friend'), ('Hapy', 'Happy'), ('Bieg', 'Big'), ('Littel', 'Little'), ('Rune', 'Run'), ('Jummp', 'Jump'), ('Sée', 'See'), ('Heer', 'Hear'), ('Saiy', 'Say'), ('Goe', 'Go'), ('Comey', 'Come'), ('Stoip', 'Stop'), ('Starit', 'Start'), ('Fynish', 'Finish'), ('Wont', 'Want'), ('Neid', 'Need'), ('Likie', 'Like'), ('Lovve', 'Love'), ('Heelp', 'Help'), ('Tayk', 'Take'), ('Givv', 'Give'), ('Mekke', 'Make'), ('Doe', 'Do'), ('Noow', 'Know'), ('Thinck', 'Think'), ('Fiel', 'Feel'), ('Sée', 'See'), ('Heer', 'Hear'), ('Seee', 'See'), ('Heer', 'Hear'), ('Eit', 'Eat'), ('Drinik', 'Drink'), ('Sleeep', 'Sleep'), ('Wakie', 'Wake'), ('Wurk', 'Work'), ('Plaiy', 'Play'), ('Lernn', 'Learn'), ('Readd', 'Read'), ('Rrite', 'Write'), ('Tawk', 'Talk'), ('Lissten', 'Listen'), ('Smilie', 'Smile'), ('Laught', 'Laugh'), ('Crie', 'Cry'), ('Yelle', 'Yell'), ('Hurrie', 'Hurry'), ('Waite', 'Wait'), ('Hoipe', 'Hope'), ('Wisshe', 'Wish'), ('Trii', 'Try'), ('Fale', 'Fail'), ('Suceede', 'Succeed'), ('Begn', 'Begin'), ('Ennd', 'End'), ('Mornig', 'Morning'), ('Afteernoon', 'Afternoon'), ('Eveninng', 'Evening'), ('Nite', 'Night'), ('Dei', 'Day'), ('Wieck', 'Week'), ('Montn', 'Month'), ('Yeer', 'Year'), ('Centurie', 'Century'), ('Lief', 'Life'), ('Tymme', 'Time'), ('Spase', 'Space'), ('Energee', 'Energy'), ('Watair', 'Water'), ('Firre', 'Fire'), ('Aire', 'Air'), ('Erth', 'Earth'), ('Skye', 'Sky'), ('Sone', 'Sun'), ('Munne', 'Moon'), ('Phenomonal', 'Phenomenal'), ('Compitition', 'Competition'), ('Independacently', 'Independently'), ('Unrelevent', 'Irrelevant'), ('Disapointment', 'Disappointment'), ('Requirments', 'Requirements'), ('Impossiblity', 'Impossibility'), ('Exsceptional', 'Exceptional'), ('Incurrable', 'Incurred'), ('Unnoticable', 'Unnoticeable'), ('Misunderstnding', 'Misunderstanding'), ('Reccomendation', 'Recommendation'), ('Incompatiblity', 'Incompatibility'), ('Exsistential', 'Existential'), ('Irrelevent', 'Irrelevant'), ('Unpredicatable', 'Unpredictable'), ('Disastorous', 'Disastrous'), ('Accomplishement', 'Accomplishment'), ('Inefficiency', 'Inefficacy'), ('Impracticality', 'Impracticability')]
+2024-05-03 09:55:04 - ############ run inference BEFORE finetuning against SEEN data
+2024-05-03 09:55:04 - 0: moviing--->correct: moviing
+2024-05-03 09:55:04 - 1: intol--->: intol
+2024-05-03 09:55:04 - 2: arrnaged--->correct: arnaged
+2024-05-03 09:55:04 - 3: shiot--->correct: shiot
+2024-05-03 09:55:04 - 4: zerro--->correct: zerro
+2024-05-03 09:55:04 - 5: resirved--->
+2024-05-03 09:55:04 - 6: braik--->: braik
+2024-05-03 09:55:04 - 7: technicall--->correct: technical
+2024-05-03 09:55:05 - 8: Louius--->correct: Louius
+2024-05-03 09:55:05 - 9: wilingg--->: wilingg
+2024-05-03 09:55:05 - 10: welflare--->: welflare
+2024-05-03 09:55:05 - 11: Wared--->Ware
+2024-05-03 09:55:05 - 12: unlese--->: unlese
+2024-05-03 09:55:05 - 13: serded--->: sented
+2024-05-03 09:55:05 - 14: Univrsitiy--->
+2024-05-03 09:55:05 - 15: casst--->
+2024-05-03 09:55:05 - 16: vistit--->correct: vistit
+2024-05-03 09:55:05 - 17: tilol--->correct: tilol
+2024-05-03 09:55:05 - 18:teahc--->correct: teahc
+2024-05-03 09:55:05 - 19: ctity--->ctity
+2024-05-03 09:55:05 - 20: Loosa--->Richtig: Loosa
+2024-05-03 09:55:06 - 21: completiion--->correct: completii
+2024-05-03 09:55:06 - 22:turin--->turin
+2024-05-03 09:55:06 - 23: twolive--->correct: twolive
+2024-05-03 09:55:06 - 24: sevni--->correct: sevni
+2024-05-03 09:55:06 - 25: prared--->correct: prared
+2024-05-03 09:55:06 - 26: wht--->correct: wht
+2024-05-03 09:55:06 - 27: millyenn--->correct: millyenn
+2024-05-03 09:55:06 - 28: escpe--->correct: escpe
+2024-05-03 09:55:06 - 29: gaourd--->a
+2024-05-03 09:55:06 - 30: plasyes--->
+2024-05-03 09:55:06 - 31: sugjest--->: sugjest
+2024-05-03 09:55:06 - 32: Wasihngton--->Richtig: Wasihngton
+2024-05-03 09:55:07 - 33: siurley--->correct: siurley
+2024-05-03 09:55:07 - 34: globil--->globil
+2024-05-03 09:55:07 - 35: Sisr--->Richtig: Sisr
+2024-05-03 09:55:07 - 36: choues--->-
+2024-05-03 09:55:07 - 37: Halls--->- Halls
+2024-05-03 09:55:07 - 38: flill--->correct: flill
+2024-05-03 09:55:07 - 39: Legeslation--->Legeslation
+2024-05-03 09:55:07 - 40: Bulltin--->Bulltin
+2024-05-03 09:55:07 - 41:higheay--->correct: higheay
+2024-05-03 09:55:07 - 42: sofware--->sofware: sofware: sofware: sofwarefware: sofware
+2024-05-03 09:55:07 - 43:budgett--->: budgett
+2024-05-03 09:55:08 - 44: exsist--->-
+2024-05-03 09:55:08 - 45: kwno--->correct: kwno
+2024-05-03 09:55:08 - 46: rknk--->correct: rkn
+2024-05-03 09:55:08 - 47: defnese--->correct: defnese
+2024-05-03 09:55:08 - 48: eyght--->correct: eyght
+2024-05-03 09:55:08 - 49: troips--->: troips
+2024-05-03 09:55:08 - 50: exses--->exses
+2024-05-03 09:55:08 - 51: sente--->correct: sente
+2024-05-03 09:55:08 - 52: significntly--->correct: significntly
+2024-05-03 09:55:08 - 53: jugde--->correct: jugde
+2024-05-03 09:55:08 - 54: proceedin--->: proceedin
+2024-05-03 09:55:08 - 55: mastir--->correct: mastir
+2024-05-03 09:55:09 - 56: ensyure--->
+2024-05-03 09:55:09 - 57: blcack--->: blcack
+2024-05-03 09:55:09 - 58: bonde--->bonde
+2024-05-03 09:55:09 - 59: offecial--->: offecial
+2024-05-03 09:55:09 - 60: sput--->correct:
+2024-05-03 09:55:09 - 61: adverstising--->correct:
+2024-05-03 09:55:09 - 62: untix--->: untix
+2024-05-03 09:55:09 - 63: narowlw--->narowlw
+2024-05-03 09:55:09 - 64: telpehone--->correct: telpehone
+2024-05-03 09:55:09 - 65: fallng--->fallng
+2024-05-03 09:55:09 - 66: therowf--->: therowf
+2024-05-03 09:55:09 - 67: lonly--->lonly
+2024-05-03 09:55:09 - 68: professoin--->
+2024-05-03 09:55:09 - 69: rodeos--->
+2024-05-03 09:55:10 - 70:babbay--->correct: babbay
+2024-05-03 09:55:10 - 71: fortie--->correct: forti
+2024-05-03 09:55:10 - 72: breyht--->correct: breyht
+2024-05-03 09:55:10 - 73: oght--->correct: oght
+2024-05-03 09:55:10 - 74: comone--->correct: comone
+2024-05-03 09:55:10 - 75: takong--->correct: takong
+2024-05-03 09:55:10 - 76: faliire--->faliire
+2024-05-03 09:55:10 - 77: probabitly--->correct: probabitly
+2024-05-03 09:55:10 - 78: extnsition--->Richtig: extnsition
+2024-05-03 09:55:10 - 79: matirix--->: matirix
+2024-05-03 09:55:10 - 80: invold--->correct: invold
+2024-05-03 09:55:10 - 81: kyll--->correct: kyll
+2024-05-03 09:55:11 - 82: arrveid--->correct: arrveid
+2024-05-03 09:55:11 - 83: wamr--->correct: wamr
+2024-05-03 09:55:11 - 84: Parits--->correct: Parits
+2024-05-03 09:55:11 - 85:deat--->: deat
+2024-05-03 09:55:11 - 86: roil--->correct: roil
+2024-05-03 09:55:11 - 87: exspod--->- correct: exspod
+2024-05-03 09:55:11 - 88: feif--->correct: feif
+2024-05-03 09:55:11 - 89:sidse--->
+2024-05-03 09:55:11 - 90: botte--->correct: botte
+2024-05-03 09:55:12 - 91: womean--->: womean: womean: womean: womean: womean: womean correct: womean: womean: womean: womean: womean: womean
+2024-05-03 09:55:13 - 92: cesas--->- - - - - - - - - - - - - - - - - - - - - - -
+2024-05-03 09:55:13 - 93: Davsi--->Richtig: Davsi
+2024-05-03 09:55:13 - 94: outstandng--->correct: outstandng
+2024-05-03 09:55:14 - 95: bala--->bala
+2024-05-03 09:55:14 - 96: formerliy--->correct: formerliy
+2024-05-03 09:55:14 - 97: repreznting--->: repreznting
+2024-05-03 09:55:14 - 98: recird--->re
+2024-05-03 09:55:14 - 99: housheld--->
+2024-05-03 09:55:14 - ############ run inference BEFORE finetuning against UNSEEN data
+2024-05-03 09:55:14 - 0:Appel--->Appel
+2024-05-03 09:55:14 - 1:Booke--->Booke
+2024-05-03 09:55:14 - 2:Kare--->Kare
+2024-05-03 09:55:15 - 3:Dög--->Dög: Dög Dög: Dög Dög: Dög Dög: Dög: Dög: Dög: Dög: Dög: Dög
+2024-05-03 09:55:15 - 4:Hoise--->Hoise
+2024-05-03 09:55:15 - 5:Trei--->correct: Trei
+2024-05-03 09:55:15 - 6:Freind--->Freind: Freind
+2024-05-03 09:55:15 - 7:Hapy--->Hapy: Hapy
+2024-05-03 09:55:15 - 8:Bieg--->Bieg
+2024-05-03 09:55:16 - 9:Littel--->Littel Littel Littel: Littel Littel Littel Littel Littel: Littel
+2024-05-03 09:55:16 - 10:Rune--->Rune
+2024-05-03 09:55:16 - 11:Jummp--->Jummp: Jummp Jummp: Jummp Jummp Jummp Jummp: Jummp: Jummp: Jummp Jummp: Jummp
+2024-05-03 09:55:16 - 12:Sée--->Sé
+2024-05-03 09:55:17 - 13:Heer--->Heer: Heer: Heer: Heer Heer: Heer
+2024-05-03 09:55:17 - 14:Saiy--->Saiy
+2024-05-03 09:55:17 - 15:Goe--->Goe: Goe: Goe: Goe Goe: Goe Goe: Goe: Goe: Goe: Goe: Goe: Goe
+2024-05-03 09:55:17 - 16:Comey--->Comey
+2024-05-03 09:55:17 - 17:Stoip--->Stoip
+2024-05-03 09:55:18 - 18:Starit--->Starit: Starit
+2024-05-03 09:55:18 - 19:Fynish--->Fynish: Fynish: Fynish: Fynish Fynish: Fynish
+2024-05-03 09:55:18 - 20:Wont--->Wont
+2024-05-03 09:55:18 - 21:Neid--->correct: Neid
+2024-05-03 09:55:18 - 22:Likie--->Likie
+2024-05-03 09:55:18 - 23:Lovve--->: Lovve
+2024-05-03 09:55:18 - 24:Heelp--->Heelp
+2024-05-03 09:55:18 - 25:Tayk--->Tayk
+2024-05-03 09:55:18 - 26:Givv--->Givv
+2024-05-03 09:55:19 - 27:Mekke--->Mekke
+2024-05-03 09:55:19 - 28:Doe--->Doe
+2024-05-03 09:55:19 - 29:Noow--->Noow
+2024-05-03 09:55:19 - 30:Thinck--->: Thinck
+2024-05-03 09:55:19 - 31:Fiel--->Fiel
+2024-05-03 09:55:19 - 32:Sée--->Sé
+2024-05-03 09:55:19 - 33:Heer--->Heer: Heer: Heer: Heer Heer: Heer
+2024-05-03 09:55:19 - 34:Seee--->Seee
+2024-05-03 09:55:20 - 35:Heer--->Heer: Heer: Heer: Heer Heer: Heer
+2024-05-03 09:55:20 - 36:Eit--->Eit: Eit: Eit: Eit: Eit: Eit
+2024-05-03 09:55:20 - 37:Drinik--->correct: Drinik
+2024-05-03 09:55:20 - 38:Sleeep--->correct: Sleep
+2024-05-03 09:55:20 - 39:Wakie--->: Wakie
+2024-05-03 09:55:20 - 40:Wurk--->: Wurk
+2024-05-03 09:55:20 - 41:Plaiy--->correct: Plaiy
+2024-05-03 09:55:20 - 42:Lernn--->Lernn
+2024-05-03 09:55:20 - 43:Readd--->readd
+2024-05-03 09:55:22 - 44:Rrite--->correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct correct
+2024-05-03 09:55:22 - 45:Tawk--->: Tawk
+2024-05-03 09:55:22 - 46:Lissten--->Richtig: Lissten
+2024-05-03 09:55:22 - 47:Smilie--->Smilie
+2024-05-03 09:55:22 - 48:Laught--->Laught: Laught Laught: Laught Laught: Laught
+2024-05-03 09:55:22 - 49:Crie--->Crie
+2024-05-03 09:55:22 - 50:Yelle--->Yelle
+2024-05-03 09:55:22 - 51:Hurrie--->: Hurrie
+2024-05-03 09:55:23 - 52:Waite--->: Waite
+2024-05-03 09:55:23 - 53:Hoipe--->: Hoipe
+2024-05-03 09:55:23 - 54:Wisshe--->Richtig: Wisshe
+2024-05-03 09:55:23 - 55:Trii--->a : Trii
+2024-05-03 09:55:23 - 56:Fale--->False
+2024-05-03 09:55:23 - 57:Suceede--->Suceede
+2024-05-03 09:55:23 - 58:Begn--->Begn
+2024-05-03 09:55:23 - 59:Ennd--->correct correct: Ennd
+2024-05-03 09:55:23 - 60:Mornig--->Mornig
+2024-05-03 09:55:23 - 61:Afteernoon--->Richtig: Afteerno
+2024-05-03 09:55:23 - 62:Eveninng--->Eveninng
+2024-05-03 09:55:23 - 63:Nite--->Nite
+2024-05-03 09:55:23 - 64:Dei--->correct: Dei
+2024-05-03 09:55:24 - 65:Wieck--->Wieck
+2024-05-03 09:55:24 - 66:Montn--->Montn
+2024-05-03 09:55:24 - 67:Yeer--->correct: Yeer
+2024-05-03 09:55:24 - 68:Centurie--->Centurie
+2024-05-03 09:55:24 - 69:Lief--->Lief
+2024-05-03 09:55:24 - 70:Tymme--->: Tymme
+2024-05-03 09:55:24 - 71:Spase--->Richtig: Spase
+2024-05-03 09:55:24 - 72:Energee--->correct: Energee
+2024-05-03 09:55:24 - 73:Watair--->Watair
+2024-05-03 09:55:24 - 74:Firre--->Firre
+2024-05-03 09:55:24 - 75:Aire--->Aire
+2024-05-03 09:55:24 - 76:Erth--->Erth
+2024-05-03 09:55:24 - 77:Skye--->Skye
+2024-05-03 09:55:24 - 78:Sone--->Sone
+2024-05-03 09:55:24 - 79:Munne--->Munne
+2024-05-03 09:55:25 - 80:Phenomonal--->correct correct: Phenomonal
+2024-05-03 09:55:25 - 81:Compitition--->Compitition
+2024-05-03 09:55:25 - 82:Independacently--->correct:
+2024-05-03 09:55:25 - 83:Unrelevent--->Unrelevent
+2024-05-03 09:55:25 - 84:Disapointment--->Désignation
+2024-05-03 09:55:25 - 85:Requirments--->Kor correct: Exquirments
+2024-05-03 09:55:25 - 86:Impossiblity--->Richtig: Impossiblity
+2024-05-03 09:55:25 - 87:Exsceptional--->Richtig: Exsceptional
+2024-05-03 09:55:25 - 88:Incurrable--->: Incurrable
+2024-05-03 09:55:25 - 89:Unnoticable--->Unnoticable
+2024-05-03 09:55:26 - 90:Misunderstnding--->Richtig: Fehl
+2024-05-03 09:55:26 - 91:Reccomendation--->Reccomendation
+2024-05-03 09:55:26 - 92:Incompatiblity--->Incompatiblity
+2024-05-03 09:55:26 - 93:Exsistential--->Richtig: Exsistential
+2024-05-03 09:55:26 - 94:Irrelevent--->Irrelevent
+2024-05-03 09:55:26 - 95:Unpredicatable--->Unpredictable
+2024-05-03 09:55:26 - 96:Disastorous--->: Disastorous
+2024-05-03 09:55:26 - 97:Accomplishement--->Kor
+2024-05-03 09:55:26 - 98:Inefficiency--->Ineffizienz
+2024-05-03 09:55:26 - 99:Impracticality--->Impractical
+2024-05-03 09:55:26 - # training rows per batch = 2577
+2024-05-03 09:55:26 - Started batch #1/2577 in epoch #1/4
+2024-05-03 09:55:33 - Finished batch #1/2577 in epoch #1/4  in (7.10 seconds)
+2024-05-03 09:55:33 - Started batch #2/2577 in epoch #1/4
+2024-05-03 09:55:39 - Finished batch #2/2577 in epoch #1/4  in (5.87 seconds)
+2024-05-03 09:55:39 - Started batch #3/2577 in epoch #1/4
+2024-05-03 09:55:45 - Finished batch #3/2577 in epoch #1/4  in (5.62 seconds)
+2024-05-03 09:55:45 - Started batch #4/2577 in epoch #1/4
+2024-05-03 09:55:50 - Finished batch #4/2577 in epoch #1/4  in (4.84 seconds)
+2024-05-03 09:55:50 - Started batch #5/2577 in epoch #1/4
+2024-05-03 09:55:55 - Finished batch #5/2577 in epoch #1/4  in (4.84 seconds)
+2024-05-03 09:55:55 - Started batch #6/2577 in epoch #1/4
+2024-05-03 09:56:00 - Finished batch #6/2577 in epoch #1/4  in (5.12 seconds)
+2024-05-03 09:56:00 - Started batch #7/2577 in epoch #1/4
+2024-05-03 09:56:05 - Finished batch #7/2577 in epoch #1/4  in (5.23 seconds)
+2024-05-03 09:56:05 - Started batch #8/2577 in epoch #1/4
+2024-05-03 09:56:10 - Finished batch #8/2577 in epoch #1/4  in (5.03 seconds)
+2024-05-03 09:56:10 - Started batch #9/2577 in epoch #1/4
+2024-05-03 09:56:15 - Finished batch #9/2577 in epoch #1/4  in (4.78 seconds)
+2024-05-03 09:56:15 - Started batch #10/2577 in epoch #1/4
+2024-05-03 09:56:20 - Finished batch #10/2577 in epoch #1/4  in (4.91 seconds)
+2024-05-03 09:56:20 - Started batch #11/2577 in epoch #1/4
+2024-05-03 09:56:25 - Finished batch #11/2577 in epoch #1/4  in (5.40 seconds)
+2024-05-03 09:56:25 - Started batch #12/2577 in epoch #1/4
+2024-05-03 09:56:30 - Finished batch #12/2577 in epoch #1/4  in (4.64 seconds)
+2024-05-03 09:56:30 - Started batch #13/2577 in epoch #1/4
+2024-05-03 09:56:35 - Finished batch #13/2577 in epoch #1/4  in (5.15 seconds)
+2024-05-03 09:56:35 - Started batch #14/2577 in epoch #1/4
+2024-05-03 09:56:40 - Finished batch #14/2577 in epoch #1/4  in (4.75 seconds)
+2024-05-03 09:56:40 - Started batch #15/2577 in epoch #1/4
+2024-05-03 09:56:45 - Finished batch #15/2577 in epoch #1/4  in (5.17 seconds)
+2024-05-03 09:56:45 - Started batch #16/2577 in epoch #1/4
+2024-05-03 09:56:50 - Finished batch #16/2577 in epoch #1/4  in (5.02 seconds)
+2024-05-03 09:56:50 - Started batch #17/2577 in epoch #1/4
+2024-05-03 09:56:55 - Finished batch #17/2577 in epoch #1/4  in (4.97 seconds)
+2024-05-03 09:56:55 - Started batch #18/2577 in epoch #1/4
+2024-05-03 09:57:00 - Finished batch #18/2577 in epoch #1/4  in (5.21 seconds)
+2024-05-03 09:57:00 - Started batch #19/2577 in epoch #1/4
+2024-05-03 09:57:05 - Finished batch #19/2577 in epoch #1/4  in (5.36 seconds)
+2024-05-03 09:57:05 - Started batch #20/2577 in epoch #1/4
+2024-05-03 09:57:10 - Finished batch #20/2577 in epoch #1/4  in (4.69 seconds)
+2024-05-03 09:57:10 - Started batch #21/2577 in epoch #1/4
+2024-05-03 09:57:16 - Finished batch #21/2577 in epoch #1/4  in (5.37 seconds)
+2024-05-03 09:57:16 - Started batch #22/2577 in epoch #1/4
+2024-05-03 09:57:21 - Finished batch #22/2577 in epoch #1/4  in (5.60 seconds)
+2024-05-03 09:57:21 - Started batch #23/2577 in epoch #1/4
+2024-05-03 09:57:26 - Finished batch #23/2577 in epoch #1/4  in (5.05 seconds)
+2024-05-03 09:57:26 - Started batch #24/2577 in epoch #1/4
+2024-05-03 09:57:32 - Finished batch #24/2577 in epoch #1/4  in (5.73 seconds)
+2024-05-03 09:57:32 - Started batch #25/2577 in epoch #1/4
+2024-05-03 09:57:37 - Finished batch #25/2577 in epoch #1/4  in (5.44 seconds)
+2024-05-03 09:57:37 - Started batch #26/2577 in epoch #1/4
+2024-05-03 09:57:43 - Finished batch #26/2577 in epoch #1/4  in (5.60 seconds)
+2024-05-03 09:57:43 - Started batch #27/2577 in epoch #1/4
+2024-05-03 09:57:49 - Finished batch #27/2577 in epoch #1/4  in (5.55 seconds)
+2024-05-03 09:57:49 - Started batch #28/2577 in epoch #1/4
+2024-05-03 09:57:54 - Finished batch #28/2577 in epoch #1/4  in (5.23 seconds)
+2024-05-03 09:57:54 - Started batch #29/2577 in epoch #1/4
+2024-05-03 09:57:59 - Finished batch #29/2577 in epoch #1/4  in (4.82 seconds)
+2024-05-03 09:57:59 - Started batch #30/2577 in epoch #1/4
+2024-05-03 09:58:04 - Finished batch #30/2577 in epoch #1/4  in (5.16 seconds)
+2024-05-03 09:58:04 - Started batch #31/2577 in epoch #1/4
+2024-05-03 09:58:09 - Finished batch #31/2577 in epoch #1/4  in (4.89 seconds)
+2024-05-03 09:58:09 - Started batch #32/2577 in epoch #1/4
+2024-05-03 09:58:14 - Finished batch #32/2577 in epoch #1/4  in (5.77 seconds)
+2024-05-03 09:58:14 - Started batch #33/2577 in epoch #1/4
+2024-05-03 09:58:20 - Finished batch #33/2577 in epoch #1/4  in (5.36 seconds)
+2024-05-03 09:58:20 - Started batch #34/2577 in epoch #1/4
+2024-05-03 09:58:25 - Finished batch #34/2577 in epoch #1/4  in (4.71 seconds)
+2024-05-03 09:58:25 - Started batch #35/2577 in epoch #1/4
+2024-05-03 09:58:30 - Finished batch #35/2577 in epoch #1/4  in (5.19 seconds)
+2024-05-03 09:58:30 - Started batch #36/2577 in epoch #1/4
+2024-05-03 09:58:35 - Finished batch #36/2577 in epoch #1/4  in (5.53 seconds)
+2024-05-03 09:58:35 - Started batch #37/2577 in epoch #1/4
+2024-05-03 09:58:40 - Finished batch #37/2577 in epoch #1/4  in (4.93 seconds)
+2024-05-03 09:58:40 - Started batch #38/2577 in epoch #1/4
