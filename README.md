@@ -3,6 +3,3 @@ This is a prototype to validate whether auto-correction is feasible using an on-
 
 1. High-quality spelling mistakes correction.
 2. Stellar on-device inference speed (sub 100 ms)
-
-   
-
